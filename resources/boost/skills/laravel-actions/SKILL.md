@@ -15,12 +15,10 @@ Use this skill to implement or update actions based on `lorisleiva/laravel-actio
 2. Create or edit an action class that uses `Lorisleiva\Actions\Concerns\AsAction`.
 3. Implement `handle(...)` with the core business logic first.
 4. Add adapter methods only when needed for the requested entrypoint:
-
-- `asController` (+ route/invokable controller usage)
-- `asJob` (+ dispatch)
-- `asListener` (+ event listener wiring)
-- `asCommand` (+ command signature/description)
-
+   - `asController` (+ route/invokable controller usage)
+   - `asJob` (+ dispatch)
+   - `asListener` (+ event listener wiring)
+   - `asCommand` (+ command signature/description)
 5. Add or update tests for the chosen entrypoint.
 6. When tests need isolation, use action fakes (`MyAction::fake()`) and assertions (`MyAction::assertDispatched()`).
 
@@ -158,7 +156,7 @@ Use a two-layer strategy:
 
 ### Deep Dive: `AsFake` methods (2.x)
 
-Reference: https://www.laravelactions.com/2.x/as-fake.html#methods-provided
+Reference: https://www.laravelactions.com/2.x/as-fake.html
 
 Use these methods intentionally based on what you want to prove.
 
@@ -291,3 +289,16 @@ Run the minimum relevant suite first, e.g. `php artisan test --compact --filter=
 - Assuming listener wiring works without explicit registration where required.
 - Testing only entrypoints and skipping direct `handle(...)` behavior tests.
 - Overusing Actions for one-off, single-context logic with no reuse pressure.
+
+## Topic References
+
+Use these references for deep dives by entrypoint/topic. Keep `SKILL.md` focused on workflow and decision rules.
+
+- Object entrypoint: `references/object.md`
+- Controller entrypoint: `references/controller.md`
+- Job entrypoint: `references/job.md`
+- Listener entrypoint: `references/listener.md`
+- Command entrypoint: `references/command.md`
+- With attributes: `references/with-attributes.md`
+- Testing and fakes: `references/testing-fakes.md`
+- Troubleshooting: `references/troubleshooting.md`
