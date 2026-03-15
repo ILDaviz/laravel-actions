@@ -20,12 +20,9 @@ Use this reference when action wiring behaves unexpectedly.
 - Queue worker/config mismatch.
 - Listener mapping not loaded.
 - Command signature mismatch.
+- Command not registered in the console kernel.
 
 ## Debug checklist
 - Reproduce with a focused failing test.
 - Validate wiring layer first, then domain behavior.
 - Isolate dependencies with fakes/spies where appropriate.
-
-## Examples to add
-- [ ] “Action not dispatched” diagnosis flow.
-- [ ] “Command runs but no effect” diagnosis flow.

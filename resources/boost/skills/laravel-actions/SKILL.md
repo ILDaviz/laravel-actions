@@ -145,7 +145,7 @@ Use these members only when needed:
 
 - Define `$commandSignature` and `$commandDescription` properties.
 - Implement `asCommand(Command $command)` and keep console IO in this method only.
-- Import Command with use `Illuminate\Console\Command`;
+- Import `Command` with `use Illuminate\Console\Command;`.
 
 ## Testing Guidance
 
