@@ -79,8 +79,6 @@ class PublishArticle
 
 #### Project Pattern: Job Action with Extra Methods
 
-A common real-world pattern in this codebase is visible in `app/Actions/Demo/GetDemoData.php`.
-
 ```php
 <?php
 
